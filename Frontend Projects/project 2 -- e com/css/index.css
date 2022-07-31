@@ -1,0 +1,725 @@
+/* .............fonts.............. */
+
+/* kaushan script */
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+/* hind */
+@import url('https://fonts.googleapis.com/css2?family=Hind&display=swap');
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* ...................reusable css................. */
+
+.container{
+    width: 88%;
+    display: flex;
+}
+
+.title{
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 30%;
+    font-family: 'Hind', sans-serif;
+    font-size: 50px;
+    letter-spacing: .05em;
+    color: black;
+}
+
+.container-center, body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.offer-white-text{
+    color: white;
+}
+
+
+.offer-black-text{
+    color: black;
+}
+
+
+
+/* ..............header.............. */
+
+.header{
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.header-container{
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo{
+    height: 85px;
+    width: 15%;
+    /* background-color: red; */
+    line-height: 85px;
+    font-size: 45px;
+    color: white;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.navbar{
+    height: 60px;
+    width: 100%;
+    /* background-color: green; */
+}
+
+.nav-links{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.link{
+    height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 60px;
+    color: white;
+    font-size: 15px;
+    letter-spacing: .03em;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; 
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.link:hover{
+    transform: scale(1.05);
+}
+
+/* .................banner.............. */
+
+.banner{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+    background-image: url('../media/images/banner.jpg');
+    background-size: cover;
+}
+
+
+.banner-container{
+    justify-content: flex-end;
+}
+
+.banner-details{
+    height: 290px;
+    padding: 25px 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 230px;
+    background-color: rgba(0, 0, 0, .3);
+    transition: .5s;
+    /* background-color: yellow; */
+}
+
+.banner-details:hover{
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.banner-details:hover .banner-heading{
+    transform: scale(1.02);
+}
+
+
+.banner-heading{
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    font-family:  'Kaushan Script', cursive;
+    letter-spacing: .05em;
+    color: white;
+    transition: .5s;
+}
+
+.line-thru{
+    width: 75%;
+    height: .1px;
+    display: inline-block;
+    background-color: white;
+}
+
+.btn{
+    padding: 18px 8px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 17%;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 15px;
+    transition: .5s;
+    cursor: pointer;
+    font-family:  'Poppins', sans-serif;
+    font-weight: 400;
+    letter-spacing: .04em;
+    transition: .4s;
+}
+
+.btn:hover{
+    background-color: rgba(0,0,0,.4);
+    transform: scale(1.02);
+}
+
+
+/* ....................category................... */
+
+.category{
+    padding: 80px 0px;
+    width: 100%;
+    background-color: white;
+}
+
+.category-container{
+    /* background-color: blue; */
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.cat-block{
+    width: 48.5%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cat-line-thru{
+    height: 760px;
+    width: 1px;
+    background-color: #d6d6d6;
+}
+
+.cat-head{
+    width: 20%;
+    text-align: center;
+    font-size: 33px;
+    color: black;
+    font-family: 'Hind', sans-serif;
+    /* text-decoration: underline; */
+}
+
+.cat-cards{
+    /* padding:13px 0px; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.cat-card{
+    width: 48%;
+    height: 340px;
+    /* background-color: tomato; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+}
+
+.product-info{
+    height: 50px;
+    width: 80%;
+    padding: 10px 0px;
+    box-sizing: border-box;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: .5s;
+}
+
+.cat-card:hover .product-info{
+    height: 340px;
+    width: 100%;
+}
+
+.cat-card:hover .prod-name{
+    background-color: transparent;
+}
+
+.prod-name{
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    letter-spacing: .02em;
+    transition: .5s;
+}
+
+.prod-types{
+    height: 190px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.prod-type{
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: .4s;
+    text-decoration: underline;
+}
+
+.prod-type:hover{
+    font-size: 21px;
+}
+
+.prod-btn{
+    padding: 13px 22px;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    border-radius: 5px;
+    color: white;
+    background-color: rgba(0,0,0,.6);
+    border: 1px solid white;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.prod-btn:hover{
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.cat-card:nth-child(1){
+    background-image: url('../media/images/men-cat-1.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-position-y: -45px;
+}
+
+.cat-card:nth-child(2){
+    background-image: url('../media/images/men-cat-2.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+
+.cat-card:nth-child(3){
+    margin-top: 28px;
+    background-image: url('../media/images/men-cat-3.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-position-y: -85px;
+}
+
+.cat-card:nth-child(4){
+    margin-top: 28px;
+    background-image: url('../media/images/men-cat-4.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-position-y: -100px;
+}
+
+.women-card:nth-child(1){
+    background-image: url('../media/images/women-cat-1.jpg');  
+}
+
+.women-card:nth-child(2){
+    background-image: url('../media/images/women-cat-2.webp');
+    background-position-y: -9px;
+}
+
+.women-card:nth-child(3){
+    background-image: url('../media/images/women-cat-3.webp');
+    background-position-y: -5px;
+}
+
+
+.women-card:nth-child(4){
+    background-image: url('../media/images/women-cat-4.jpeg');
+    background-position-y: -90px;
+}
+
+
+/* .................line-thru............... */
+
+.line-thru{
+    height: 1px;
+    width: 88%;
+    background-color: #d6d6d6;
+}
+
+/* .................offers............... */
+
+.offers{
+    padding: 80px 0px;
+    width: 100%;
+    /* background-color: red; */
+}
+
+.offer-cards{
+    width: 100%;
+    height: 630px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.offer-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    transition: .8s;
+    /* background-color: yellow; */
+}
+
+
+.card-visible{
+    padding: 15px;
+    box-sizing: border-box;
+    height: 630px;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.visible-offer{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    line-height: 95px;
+    color: white;
+}
+
+.card-invisible{
+    padding: 0px 15px;
+    box-sizing: border-box;
+    height: 630px;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.offer-invisible{
+    width: 32%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    /* background-color: red; */
+}
+
+.offer-img{
+    width: 100%;
+    height: 65%;
+    cursor: pointer;
+    /* background-color: white; */
+}
+
+.offer-img>img{
+    width: 100%;
+    height: 100%;
+}
+
+.offer-name{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+.offer-price{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    margin-top: 25px;
+}
+
+.old-price{
+    font-size: 22px;
+    text-decoration: line-through;
+}
+
+.offer-btn{
+    padding: 9px 32px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:  transparent;
+    transition: .5s;
+    margin-top: 25px;
+}
+
+.to-white:hover{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+
+.to-black:hover{
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
+.card-4{
+    margin-left: 75%;
+}
+
+.card-3{
+    margin-left: 50%;
+}
+
+.card-2{
+    margin-left: 25%;
+}
+
+.card-4:hover{
+    margin-left: 0;
+}
+
+.card-3:hover{
+    margin-left: 0;
+}
+
+.card-3:hover~.card-4{
+    margin-left: 100%;
+}
+
+.card-2:hover{
+    margin-left: 0;
+}
+
+.card-2:hover ~.card-3{
+    margin-left: 100%;
+}
+
+.card-2:hover~.card-4{
+    margin-left: 100%;
+}
+
+.card-1:hover~.card-2{
+    margin-left: 100%;
+}
+
+.card-1:hover~.card-3{
+    margin-left: 100%;
+}
+
+.card-1:hover~.card-4{
+    margin-left: 100%;
+}
+
+
+
+/* ......................blog.................... */
+
+.blog{
+    width: 100%;
+    padding: 80px 0;
+    /* background-color: red; */
+}
+
+.blog-container{
+    /* background-color: yellow; */
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+.blog-card{
+    /* padding: ; */
+    width: 32%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-day-stamp{
+    padding:10px 8px;
+    width: 6%;
+    background-color: rgba(0, 0, 0, .9);
+    margin-left: 30px;
+    line-height: 29px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.blog-image{
+    height: 428px;
+    width: 100%;
+    margin-top: 45px;
+    cursor: pointer;
+    /* background-color: royalblue; */
+}
+
+.blog-image>img{
+    width: 100%;
+}
+
+.blog-heading{
+    font-family: 'Poppins', sans-serif;
+    font-size: 35px;
+    font-weight: 500;
+    letter-spacing: .05em;
+    color: black;
+    margin-top: 12px;
+}
+
+.blog-details{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    letter-spacing: .01em;
+    color: black;
+    margin-top: 9px;
+}
+
+.blog-read{
+    width: 25%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 19px;
+    color: black;
+    text-decoration: underline;
+    margin-top: 9px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.blog-read:hover{
+    color: rgb(95, 95, 255);
+}
+
+/* .......................footer..................... */
+
+.footer{
+    padding: 80px 0;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.footer-display{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer1{
+    width: 22%;
+    /* background-color: yellow; */
+}
+
+.footer-title{
+    font-size: 32px;
+    font-family: 'Hind', sans-serif;
+    letter-spacing: .04em;
+    /* background-color: blue; */
+}
+
+.contact-type{
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.first-margin{
+    margin-top: 25px;
+}
+
+.contact-highlight{
+    font-family:'Poppins', sans-serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+
+.footer2{
+    width: 45%;
+    /* background-color: turquoise; */
+}
+
+.news-desc{
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 25px;
+}
+
+.footer2>input{
+    width: 100%;
+    height: 60px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+}
+
+.footer3{
+    /* height: 250px; */
+    width: 25%;
+    /* background-color: bisque; */
+}
+
+.social-icons{
+    height: 50px;
+    margin-top: 25px;
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: lightblue; */
+}
+
+.social-icons>i{
+    font-size: 30px;
+}

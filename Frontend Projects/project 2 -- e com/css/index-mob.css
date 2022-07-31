@@ -1,0 +1,369 @@
+@media (min-width:320px) and (max-width:480px){
+
+
+    .title{
+        width: 100%;
+        font-size: 30px;
+    }
+
+    .container{
+        width: 93%;
+    }
+
+    /* ............header............ */
+
+    .logo{
+        width: 100%;
+        height: 60px;
+        line-height: 60px;
+        font-size: 40px;
+    }
+
+    .navbar{
+        height: 0px;
+        overflow: hidden;
+        transition: .4s;
+    }
+
+    .header:hover .navbar{
+        height: 250px;
+    }
+
+    .nav-links{
+        flex-direction: column;
+    }
+
+    .link{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+    }
+
+
+    /* .............banner............. */
+
+    .banner{
+        height: 75vh;
+    }
+
+    .banner-container{
+        justify-content: center;
+        width: 100%;
+    }
+
+    .banner-details{
+        padding: 12px 10px;
+        height: 220px;
+        width: 100%;
+        margin-top: 280px;
+    }
+
+    .banner-heading{
+        font-size: 30px;
+    }
+
+    .btn{
+        padding: 9px 3px;
+        width: 35%;
+        font-size: 14px;
+    }
+
+
+    /* ............category............ */
+
+    .category{
+        padding: 40px 0px;
+    }
+
+    .category-container{
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .cat-block{
+        width: 100%;   
+    }
+    
+    .cat-line-thru{
+        width: 100%;
+        height: 1px;
+        margin-top: 35px;
+        margin-bottom: 20px;
+    }
+
+    .cat-head{
+        width: 100%;
+        font-size: 27px;
+
+    }
+
+    .cat-card{
+        height: 220px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .product-info{
+        height: 30px;
+        width: 100%;
+        padding: 0;
+    }
+
+    .cat-card:hover .product-info{
+        height: 220px;
+        width: 100%;
+    }
+
+    .prod-types{
+        height: 170px;
+    }
+    
+    .prod-type{
+        font-size: 17px;
+    }
+
+    .prod-type:hover{
+        font-size: 18px;
+    }
+    
+
+    .prod-name{
+        font-size: 19px;
+        letter-spacing: 0;
+    }
+
+    .prod-btn{
+        padding: 4px 12px;
+        font-size: 12px;
+    }
+
+    .cat-card:nth-child(1){
+        background-position-y: 0;
+    }
+
+    .cat-card:nth-child(3){
+        margin-top: 10px;
+        background-position-y: 0;
+    }
+
+    .cat-card:nth-child(4){
+        margin-top: 10px;
+        background-position-y: 0;
+    }
+
+    /* ..............offers............... */
+
+    .offers{
+        padding: 40px 0px;
+    }
+
+    .offer-cards{
+        margin-top: 10px;
+        height: 500px;
+        position: static;
+        overflow: hidden;
+    }
+
+    .offer-card{
+        position: static;
+    }
+
+    .card-visible{
+        width: 100%;
+        height: 500px;
+    }
+
+    .card-invisible{
+        display: none;
+    }
+
+
+    .card-4{
+        margin-left: 0;
+    }
+    
+    .card-3{
+        margin-left: 0;
+    }
+    
+    .card-2{
+        margin-left: 0;
+    }
+
+
+    .card-4:hover{
+        margin-left: 0;
+    }
+    
+    .card-3:hover{
+        margin-left: 0;
+    }
+    
+    .card-3:hover~.card-4{
+        margin-left: 0;
+    }
+    
+    .card-2:hover{
+        margin-left: 0;
+    }
+    
+    .card-2:hover ~.card-3{
+        margin-left: 0;
+    }
+    
+    .card-2:hover~.card-4{
+        margin-left: 0;
+    }
+    
+    .card-1:hover~.card-2{
+        margin-left: 0;
+    }
+    
+    .card-1:hover~.card-3{
+        margin-left: 0;
+    }
+    
+    .card-1:hover~.card-4{
+        margin-left: 0;
+    }
+
+    .visible-offer{
+        font-size: 30px;
+    }
+    
+
+    .slider{
+        height: auto;
+        width: 100%;
+        animation-name: slider;
+        animation-iteration-count: infinite;
+        animation-duration: 16s;
+        animation-play-state: running;
+        /* animation-delay: 2s; */
+    }
+
+    @keyframes slider{
+
+        12.5%{
+            margin-top: 0px;
+        }
+
+        25%{
+            margin-top: -500px;
+        }
+
+        37.5%{
+            margin-top: -500px;
+        }
+
+        50%{
+            margin-top: -1000px;
+        }
+
+        62.5%{
+            margin-top: -1000px;
+        }
+
+        75%{
+            margin-top: -1500px;
+        }
+
+        87.5%{
+            margin-top: -1500px;
+        }
+
+        100%{
+            margin-top: 0px;
+        }
+
+
+
+    }
+
+    /* .....................blog..................... */
+
+    .blog{
+        padding: 40px 0;
+    }
+
+    .blog-container{
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .blog-card{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .blog-day-stamp{
+        padding: 6px 4px;
+        font-size: 20px;
+        width: 24%;
+    }
+
+    .blog-image{
+        height: 300px;        
+    }
+
+    .blog-heading{
+        margin-top: 45px;
+        font-size: 19px;
+        
+    }
+    .blog-details{
+        font-size: 14px;
+    }
+
+    .blog-read{
+        width: 35%;
+        font-size: 15px;
+    }
+
+    /* ................footer............. */
+
+    .footer{
+        padding: 30px 0;
+        flex-direction: column;
+    }
+
+    .footer1{
+        width: 100%;
+    }
+   
+    .footer-title{
+        font-size: 17px;
+    }
+
+    .contact-type{
+        font-size: 14px;
+        margin-top: 6px;
+    }
+    .contact-highlight{
+        font-size: 15px;
+    }
+
+    .footer2{
+        display: none;
+    }
+    .footer3{
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .social-icons>img{
+        width: 18%;
+        height: 30px;
+    }
+
+
+
+
+
+
+
+
+}
