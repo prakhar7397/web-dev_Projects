@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CRUD</title>
+    <link rel="stylesheet" href="./css/index.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+</head>
+<body>
+
+    <!-- <div class="filter_section">
+
+        <div class="filter_box"></div>
+
+        <div class="filter_box"></div>
+
+        <div class="filter_box"></div>
+
+        <div class="filter_btns">
+
+            <button class="btn">Search</button>
+            <button class="btn">Clear All</button>
+            <button class="btn">Close</button>
+
+        </div>
+
+    </div> -->
+    
+    <div class="container">
+
+        <!-- <div class="filter_box">
+
+            <select  id="" class="movie_category" id="movie_category" onchange="">
+                <option value="">Movie Category</option>
+                <option value="drama">Drama</option>
+                <option value="thriller">Thriller</option>
+                <option value="comedy">Comedy</option>
+                <option value="action">Action</option>
+                <option value="romance">Romance</option>
+                <option value="adventure">Adventure</option>
+                <option value="crime">Crime</option>
+                <option value="music">Music</option>
+                <option value="family">Family</option>
+            </select>
+
+            <div class="imdb">
+
+                <h3>Minimum IMDB Rating</h3>
+
+                <div class="rating_range">
+                    <span id="minRatingRange">0</span>
+                    <input type="range" min="0" max="10" id="ratingBar" value="0" onchange="">
+                    <span>10</span>
+                </div>
+
+            </div>
+
+            <button class="btn" onclick="">Filter Movies</button>
+
+            <button class="btn" onclick="">Clear Filters</button>
+
+        </div> -->
+
+
+
+  
+
+
+        <!-- .............////////  ADD NEW MOVIE ///////.............. -->
+
+        <form class="add_new_movie" id="add_new_movie">
+
+            <input type="text" placeholder="Enter Title" id="newTitle">
+
+            <input type="text" placeholder="Enter Genre separated by ," id="newGenre">
+
+            <input type="text" placeholder="Enter Release Date" id="newReleaseDate" onfocus="convertToDate('newReleaseDate')" onblur="convertToText('newReleaseDate')">
+
+            <input type="number" placeholder="Enter Duration in minutes" id="newDuration">
+
+            <input type="text" placeholder="Enter IMDB Rating" id="newImdbRating">
+
+            <input type="text" placeholder="Enter Actors separated by ," id="newActors">
+
+            <input type="url" placeholder="Enter Poster Url" id="newPoster">
+
+            <textarea placeholder="Enter Storyline" rows="10" id="newStoryline"></textarea>
+
+            <button class="btn" type="button" onclick="createMovie()">Add</button>
+
+            <i class="fa-solid fa-circle-xmark" onclick="closeInfo('add_new_movie')"></i>
+
+        </form>
+
+        <!-- ............/////// EXTRA MOVIE INFO ///////............. -->
+
+        <div class="extra_info" id="extra_info">
+
+            <div class="movie_poster">
+                <img src="" id="movie_poster">
+            </div>
+
+            <div class="movie_info">
+
+                <h2 class="movie_title" id="movie_title"></h2>
+
+                <div>
+                    <h3 class="releaseDate">Release Date</h3>
+                    <p id="releaseDate"></p>
+                </div>
+
+                <div>
+                    <h3 class="genre">Genre</h3>
+                    <p id="genre"></p>
+                </div>
+
+                <div>
+                    <h3 class="storyline">Storyline</h3>
+                    <p id="storyline"></p>
+                </div>
+
+                <div>
+                    <h3 class="actors">Actors</h3>
+                    <p id="actors"></p>
+                </div>
+
+                <div>
+                    <h3 class="imdbRating">IMDB</h3>
+                    <p id="imdbRating"></p>
+                </div>
+
+            </div>
+
+            <i class="fa-solid fa-circle-xmark" onclick="closeInfo('extra_info')"></i>
+            
+        </div>
+
+        <!-- ...........//////// UPDATE THE MOVIE ////////............... -->
+
+        <form class="update_movie" id="update_movie">
+
+            <input type="text" placeholder="Enter Title" id="updateTitle">
+
+            <input type="text" placeholder="Enter Genre separated by ," id="updateGenre">
+
+            <input type="text" placeholder="Enter Release Date" id="updateReleaseDate" onfocus="convertToDate('updateReleaseDate')" onblur="convertToText('updateReleaseDate')">
+
+            <input type="number" placeholder="Enter Duration in minutes" id="updateDuration">
+
+            <input type="text" placeholder="Enter IMDB Rating" id="updateImdbRating">
+
+            <input type="text" placeholder="Enter Actors separated by ," id="updateActors">
+
+            <input type="url" placeholder="Enter Poster Url" id="updatePoster">
+
+            <textarea placeholder="Enter Storyline" rows="10" id="updateStoryline"></textarea>
+
+            <button class="btn" onclick="updateMovie()">Update Movie</button>
+
+            <i class="fa-solid fa-circle-xmark" onclick="closeInfo('update_movie')"></i>
+
+        </form>
+
+        <!-- ..............////////// HEADER //////////............... -->
+
+        <header>
+
+            <h2 class="head_title">All Movies</h2>
+
+            <button class="btn" onclick="addNewMovie()">Add Movie</button>
+
+        </header>
+
+        <!-- ............///////// TABLE DATA //////////............. -->
+
+        <table id="table">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Release Date</th>
+                    <th>Duration(mins.)</th>
+                    <th>IMDB Rating</th>
+                    <th>Other Options</th>
+                </tr>
+            </thead>
+
+            <tbody id="data">
+
+            </tbody>
+
+        </table>
+
+        <div class="pagination_container">
+
+            <div class="pagination_bar">
+
+                <button class="btn" onclick="prevMovies()">Prev</button>
+
+                <input type="number" placeholder="Enter page number" id="pageNoInput" onkeyup="skipToPageNo(this.value)">
+
+                <button class="btn" onclick="nextMovies()">Next</button>
+
+            </div>
+
+            <p>Page <span id="current_page"></span> of <span id="total_pages"></span> found</p>
+
+        </div>
+
+    </div>
+
+    
+
+    <script src="./js/index.js"></script>
+
+    
+
+</body>
+</html>

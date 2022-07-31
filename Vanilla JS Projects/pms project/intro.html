@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Document</title>
+
+	<link rel="stylesheet" href="intro.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="form-fields">
+
+			<input type="text" placeholder="Enter name" id="name">
+
+			<input type="text" placeholder="Enter price" id="price">
+
+			<input type="text" placeholder="Enter quantity" id="quantity">
+
+			<button class="btn" onclick="addProduct()">Add Product</button>
+
+		</div>
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Price</th>
+					<th>Quantity</th>
+					<th>Operations</th>
+				</tr>
+			</thead>
+
+			<tbody id="tbody">
+				
+			</tbody>
+		</table>
+
+	</div>
+
+
+
+	<script src="intro.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Homepage-CRUD</title>
+    <link rel="stylesheet" href="./css/homepage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <section class="rating_modal" id="rating_modal">
+
+        <div class="rating_box" id="rating_box">
+            <div class="stars_box">
+                <i class="fa-solid fa-star rate_star" data-num="1" onclick="finalRating(event)" onmouseout="clearRating()" onmouseover="selectRating(event)"></i>
+                <i class="fa-solid fa-star rate_star" data-num="2" onclick="finalRating(event)" onmouseout="clearRating()" onmouseover="selectRating(event)"></i>
+                <i class="fa-solid fa-star rate_star" data-num="3" onclick="finalRating(event)" onmouseout="clearRating()" onmouseover="selectRating(event)"></i>
+                <i class="fa-solid fa-star rate_star" data-num="4" onclick="finalRating(event)" onmouseout="clearRating()" onmouseover="selectRating(event)"></i>
+                <i class="fa-solid fa-star rate_star" data-num="5" onclick="finalRating(event)" onmouseout="clearRating()" onmouseover="selectRating(event)"></i>
+            </div>
+    
+            <div class="btns">
+                <button class="btn rating_btn" onclick="submitRating()">Submit Rating</button>
+                <button class="btn cancel_btn" onclick="cancelRating()">Cancel</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="container">
+
+    <!-- ............////// HEADER ////////............ -->
+
+        <header class="header">
+
+            <h2 class="header_title">All Movies</h2>
+
+        </header>
+
+        <div class="movies_container" id="movies_container">
+
+            <!-- <div class="movie_card">
+
+                <div class="movie_poster">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzQwZDg1MGEtN2E5My00ZDJlLWI4MzItM2U2MjJhYzlkNmEzXkEyXkFqcGdeQXVyNDAxNjkxNjQ@._V1_.jpg" >
+                </div>
+                
+                <div class="movie_info">
+
+                    <h3 class="movie_title">Hulk</h3>
+
+                    <div class="rating_section">
+
+                        <div class="rating_stars">
+
+                            <div class="white_stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div class="yellow_stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                        </div>
+
+                        <div class="rating_number">(4.5)</div>
+
+                    </div>
+
+                    <div class="movie_card_btns">
+                        <button class="btn rate_btn">Rate Now</button>
+                        <button class="btn details_btn">Details</button>
+                    </div>
+
+                </div>
+
+            </div> -->
+
+        </div>
+
+        
+        
+    </section>
+
+
+
+    <script src="./js/homepage.js"></script>
+    
+</body>
+</html>

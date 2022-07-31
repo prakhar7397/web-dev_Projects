@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    /* background-color: red; */
+    height: 100vh;
+}
+
+.filters_box{
+    width: 30%;
+    height: 100vh;
+    background-color: yellowgreen;
+    position: fixed;
+    margin-left: -30%;
+    transition: .4s;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cat_section{
+    width: 90%;
+    margin-top: 30px;
+    height: 45px;
+    outline: none;
+    font-size: 16px;
+    text-indent: 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+.quantity_section{
+    width: 90%;
+    height: 45px;
+    outline: none;
+    text-indent: 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+.price_section{
+    width: 90%;
+    box-sizing: border-box;
+    padding: 10px 8px;
+    background-color: rgb(196, 204, 196);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    border-radius: 8px;
+}
+
+.price_section>h3{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.range_bar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+td>img{
+    height: 100px;
+    /* width: 80%; */
+}
+
+.products_box{
+    width: 100%;
+    /* background-color: blue; */
+    padding: 30px 70px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+tbody>tr:nth-child(even){
+    background-color:#ebebeb;
+}
+
+.product_head{
+    width: 100%;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: aquamarine; */
+    
+}
+
+.title{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.btn{
+    padding: 12px 35px;
+    font-size: 15px;
+    color: white;
+    background-color: rgb(97, 97, 247);
+    cursor: pointer;
+    border-radius: 8px;
+    border: none;
+}
+
+.table{
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,td{
+    padding: 10px;
+    border: 1px solid black;
+}
