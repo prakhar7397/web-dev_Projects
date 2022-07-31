@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PMS Frontend</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+
+    <section class="products_section">
+
+        <h1 class="heading">All Products</h1>
+
+        <div class="form">
+
+            <input type="number" class="form-control" id="id" placeholder="Enter id/Sl No.">
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+            <input type="number" class="form-control" id="price" placeholder="Enter price">
+            <input type="number" class="form-control" id="quantity" placeholder="Enter quantity">
+            <button class="btn btn-primary" onclick="createProduct()">Create</button>
+
+        </div>
+
+        <div class="form update_form" id="update_form">
+
+            <input type="number" class="form-control" id="upId" disabled placeholder="Enter id/Sl No.">
+            <input type="text" class="form-control" id="upName" placeholder="Enter name">
+            <input type="number" class="form-control" id="upPrice" placeholder="Enter price">
+            <input type="number" class="form-control" id="upQuantity" placeholder="Enter quantity">
+            <button class="btn btn-primary" onclick="updateProduct()">Update</button>
+
+        </div>
+
+        <table class="table table-striped">
+
+            <thead>
+                <tr>
+                    <th>Sl no.</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+
+            <tbody id="table_body">
+                
+
+                
+            </tbody>
+
+        </table>
+
+    </section>
+
+    <script src="./index.js"></script>
+    
+</body>
+</html>
